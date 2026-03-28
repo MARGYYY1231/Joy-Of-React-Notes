@@ -36,14 +36,14 @@ function Friend({ name, isOnline }) {
   );
 }
 
-function App() {
-  return (
-    <ul className="friend-list">
-      <Friend name="Andrew" isOnline={false} />
-      <Friend name="Beatrice" isOnline={true} />
-      <Friend name="Chen" isOnline={true} />
-    </ul>
-  )
-}
+// function App() {
+//   return (
+//     <ul className="friend-list">
+//       <Friend name="Andrew" isOnline={false} />
+//       <Friend name="Beatrice" isOnline={true} />
+//       <Friend name="Chen" isOnline={true} />
+//     </ul>
+//   )
+// }
 
-export default App;
+// export default App;

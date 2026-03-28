@@ -41,6 +41,6 @@ Here's the raw HTML:
 </form>
 */
 
-const container = document.querySelector('#root');
-const root = createRoot(container);
-root.render(element);
+// const container = document.querySelector('#root');
+// const root = createRoot(container);
+// root.render(element);

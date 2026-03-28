@@ -89,17 +89,17 @@ const userProfiles = [
   },
 ]
 
-function App() {
-  return (
-    <main className="app">
-      {userProfiles.map(profile => (
-        <ProfileCard
-          key={profile.id}
-          profile={profile}
-        />
-      ))}
-    </main>
-  );
-}
+// function App() {
+//   return (
+//     <main className="app">
+//       {userProfiles.map(profile => (
+//         <ProfileCard
+//           key={profile.id}
+//           profile={profile}
+//         />
+//       ))}
+//     </main>
+//   );
+// }
 
-export default App;
+// export default App;

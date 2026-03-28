@@ -29,18 +29,18 @@ const data = [
   }
 ];
 
-function App() {
-  return (
-    <div className="avatar-set">
-      {data.map(avatar  => (
-        <Avatar
-          key={avatar.id}
-        src={`https://sandpack-bundler.vercel.app/img/avatars/${avatar.id}.png`}
-        alt={avatar.alt}
-      />
-      ))}
-    </div>
-  )
-}
+// function App() {
+//   return (
+//     <div className="avatar-set">
+//       {data.map(avatar  => (
+//         <Avatar
+//           key={avatar.id}
+//         src={`https://sandpack-bundler.vercel.app/img/avatars/${avatar.id}.png`}
+//         alt={avatar.alt}
+//       />
+//       ))}
+//     </div>
+//   )
+// }
 
-export default App;
+// export default App;

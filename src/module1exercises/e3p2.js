@@ -70,24 +70,24 @@ const items = [
 const inStockItems = items.filter(item => item.inStock);
 const outStockItems = items.filter(item => !item.inStock);
 
-function App() {
-  return (
-    <>
-      <h2>Shopping cart</h2>
-      <CartTable items={inStockItems} />
-      <div className="actions">
-        <button>Continue checkout</button>
-      </div>
+// function App() {
+//   return (
+//     <>
+//       <h2>Shopping cart</h2>
+//       <CartTable items={inStockItems} />
+//       <div className="actions">
+//         <button>Continue checkout</button>
+//       </div>
 
-      <h2>Sold out</h2>
-      {/*
-        TODO: A second CartTable for
-        out-of-stock items
-      */
-      <CartTable items={outStockItems} />
-      }
-    </>
-  );
-}
+//       <h2>Sold out</h2>
+//       {/*
+//         TODO: A second CartTable for
+//         out-of-stock items
+//       */
+//       <CartTable items={outStockItems} />
+//       }
+//     </>
+//   );
+// }
 
-export default App;
+// export default App;

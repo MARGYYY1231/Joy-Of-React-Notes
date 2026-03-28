@@ -16,13 +16,13 @@ function Grid({ numRows, numCols }) {
   );
 }
 
-function App() {
-  return (
-    <Grid
-      numRows={8}
-      numCols={6}
-    />
-  );
-}
+// function App() {
+//   return (
+//     <Grid
+//       numRows={8}
+//       numCols={6}
+//     />
+//   );
+// }
 
-export default App;
+// export default App;

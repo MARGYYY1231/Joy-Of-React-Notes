@@ -19,13 +19,13 @@ function Button({buttonColor, text}){
   );
 }
 
-const root = createRoot(
-  document.querySelector('#root')
-);
+// const root = createRoot(
+//   document.querySelector('#root')
+// );
 
-root.render(
-  <div>
-    <Button buttonColor="red" text="Cancel"/>
-    <Button buttonColor="black" text="Confirm"/>
-  </div>
-);
+// root.render(
+//   <div>
+//     <Button buttonColor="red" text="Cancel"/>
+//     <Button buttonColor="black" text="Confirm"/>
+//   </div>
+// );
