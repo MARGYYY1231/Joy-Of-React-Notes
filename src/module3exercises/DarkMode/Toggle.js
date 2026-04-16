@@ -51,8 +51,30 @@ function Toggle({
 
 export default Toggle;
 
+
+/*
+Local Storage cheatsheet:
+
+// To save an item:
+window.localStorage.setItem('is-dark-mode', true);
+
+// To retrieve the value:
+JSON.parse(window.localStorage.getItem('is-dark-mode'));
+*/
+
+// import React from 'react';
+
+// import Toggle from './Toggle';
+
 // function App() {
-//   const [isDarkMode, setIsDarkMode] = React.useState(false);
+//   const [isDarkMode, setIsDarkMode] = React.useState(() => {
+//     const storedValue = window.localStorage.getItem('is-dark-mode');
+//     return JSON.parse(storedValue) || false
+//   });
+//   React.useEffect(() => {
+//     window.localStorage.setItem('is-dark-mode', isDarkMode);
+//     window.localStorage.setItem('is-dark-mode', isDarkMode);
+//   }, [isDarkMode]);
 
 //   return (
 //     <div
@@ -72,3 +94,5 @@ export default Toggle;
 //     </div>
 //   );
 // }
+
+// export default App;
