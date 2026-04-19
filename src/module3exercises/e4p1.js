@@ -15,6 +15,10 @@ function WindowSize() {
     }
 
     window.addEventListener('resize', getWindowSize);
+
+    return (() => {
+      window.removeEventListener('resize', handleResize);
+    });
   }, []);
   
   return (
