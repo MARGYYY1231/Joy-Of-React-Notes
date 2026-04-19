@@ -31,6 +31,10 @@ function Toasty() {
   });
 
   observer.observe(wrapperElement.current);
+
+  return (() => {
+      observer.disconnect();
+    });
 }, []);
   
   // This CSS value will control whether the ghost is
