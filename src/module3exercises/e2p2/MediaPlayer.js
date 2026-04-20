@@ -8,6 +8,7 @@ function MediaPlayer({ src }) {
 
   const audioRef = React.useRef();
 
+  //add spacebar pause annd play
   React.useEffect(() =>{
     function spacebar(event){
       if(event.code === "Space"){
@@ -22,6 +23,7 @@ function MediaPlayer({ src }) {
     });
   }, [isPlaying]);
 
+  //play Audio
   React.useEffect(() => {
     if (isPlaying) {
       audioRef.current.pause();
@@ -40,6 +42,7 @@ function MediaPlayer({ src }) {
         </div>
         <button
           onClick={() => {
+            //Toggle
             setIsPlaying(!isPlaying);
           }}
         >
