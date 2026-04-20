@@ -4,37 +4,56 @@ import { Play, Pause } from 'react-feather';
 import VisuallyHidden from './VisuallyHidden';
 
 function MediaPlayer({ src }) {
-  const [play, setPlay] = React.useState(false);
-  const soundRef = React.useRef();
+  const [isPlaying, setIsPlaying] = React.useState(false);
+
+  const audioRef = React.useRef();
+
+  React.useEffect(() =>{
+    function spacebar(event){
+      if(event.code === "Space"){
+        setIsPlaying(!isPlaying);
+      }
+    }
+    
+    window.addEventListener('keydown', spacebar);
+
+    return (() => {
+      window.removeEventListener('keydown', spacebar)
+    });
+  }, [isPlaying]);
+
+  React.useEffect(() => {
+    if (isPlaying) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play();
+    }
+  }, [isPlaying]);
+
   return (
     <div className="wrapper">
       <div className="media-player">
-        <img
-          alt=""
-          src="https://sandpack-bundler.vercel.app/img/take-it-easy.png"
-        />
+        <img alt="" src="https://sandpack-bundler.vercel.app/img/take-it-easy.png" />
         <div className="summary">
           <h2>Take It Easy</h2>
           <p>Bvrnout ft. Mia Vaile</p>
         </div>
         <button
           onClick={() => {
-            if(play){
-              soundRef.current.play();
-            }else{
-              soundRef.current.pause();
-            }
-
-            setPlay(!play);
+            setIsPlaying(!isPlaying);
           }}
-          >
-          {(play) ? <Play /> : <Pause />}
-          <VisuallyHidden>
-            Toggle playing
-          </VisuallyHidden>
+        >
+          {isPlaying ? <Play /> : <Pause />}
+          <VisuallyHidden>Toggle playing</VisuallyHidden>
         </button>
-        
-        <audio ref={soundRef} src={src} />
+
+        <audio
+          ref={audioRef}
+          src={src}
+          onEnded={() => {
+            setIsPlaying(false);
+          }}
+        />
       </div>
     </div>
   );
