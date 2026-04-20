@@ -24,6 +24,8 @@ function MediaPlayer({ src }) {
   }, [isPlaying]);
 
   //play Audio
+  //Keep in sync the audio and isPlaying
+  //Instead of copying this code twice. (Once in the above and once in the onClick)
   React.useEffect(() => {
     if (isPlaying) {
       audioRef.current.pause();
