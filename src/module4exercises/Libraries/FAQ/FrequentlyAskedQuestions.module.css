@@ -40,8 +40,8 @@
 .item:not(:last-of-type) .content {
   padding-bottom: 24px;
 }
-.trigger svg {
-  display: block;
-  flex-shrink: 0;
-  transform: translateY(3px);
+
+/* Changed this to transform so arrow flips */
+.trigger[data-state="open"] svg {
+  transform: rotate(180deg);
 }
